@@ -1,0 +1,93 @@
+.nav-separator {
+  margin: 15px;
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, transparent 0%, rgba(155, 233, 255, 0.5) 25%, #00B7FF 50%, rgba(155, 233, 255, 0.5) 75%, transparent 100%);
+  filter: blur(0.25px);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  color: white;
+}
+
+nav {
+  padding-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+nav div {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: 2px solid #9BE9FF;
+  border-left: 2px solid #9BE9FF;
+  border-right: 2px solid #9BE9FF;
+  display: flex;
+  gap: 3rem;
+  padding: 0 1rem;
+  box-shadow: 0px 0px 10px 3px #00B7FF;
+  clip-path: inset(-20px -20px 0px -20px);
+}
+nav div .link {
+  color: inherit;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 65px;
+}
+
+.home-text {
+  font-size: 30px;
+}
+
+.project-card {
+  display: inline-block;
+  padding: 20px;
+}
+
+.project-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-link {
+  width: 75px;
+  height: 75px;
+  padding: 15px;
+  border-radius: 50%;
+  border: 2px solid #9BE9FF;
+  background-color: #9BE9FF;
+  box-shadow: 0px 0px 10px 3px #00B7FF;
+  display: inline-flex;
+  margin: 15px;
+  font-size: 40px;
+}
+
+.card {
+  background-color: #443AFF;
+  border-radius: 0;
+}
+
+.card-title {
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  color: white;
+}
+
+.card-text {
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  color: white;
+}/*# sourceMappingURL=App.css.map */
