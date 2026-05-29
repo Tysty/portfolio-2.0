@@ -15,7 +15,7 @@ function ProjectCard({ title, image, desc, link }: Props) {
         src={CardDoorTop}
         style={{
           position: "absolute",
-          top: -10,
+          top: -15,
           left: 18,
           width: "23rem",
           zIndex: 1,
@@ -25,9 +25,8 @@ function ProjectCard({ title, image, desc, link }: Props) {
       <div
         className="card p-2 staggered-fade"
         style={{
-          display: "flex",
           width: "22rem",
-          height: "27rem",
+          height: "32rem",
           margin: "25px",
         }}
       >
@@ -36,7 +35,7 @@ function ProjectCard({ title, image, desc, link }: Props) {
           className="card-img-top"
           alt="..."
           style={{
-            marginTop: "30px",
+            marginTop: "60px",
             height: "200px",
             objectFit: "cover",
             pointerEvents: "none",
@@ -45,11 +44,7 @@ function ProjectCard({ title, image, desc, link }: Props) {
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
           <p className="card-text">{desc}</p>
-          <a
-            href={link}
-            className="btn btn-primary"
-            style={{ marginTop: "auto" }}
-          >
+          <a href={link} className="btn btn-primary">
             Go to Project
           </a>
         </div>
