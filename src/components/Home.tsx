@@ -1,6 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import CircleLink from "./CircleLink";
-import * as images from "../assets";
+import { projects } from "../projects";
 
 function Home() {
   return (
@@ -10,28 +10,22 @@ function Home() {
       <h3 className="center home-text">I like making games</h3>
       <div className="center h-group">
         <ProjectCard
-          title="Prawn Brawl"
-          image={images.PrawnThumb}
-          desc="Battle your friends in this 2D local multiplayer crustacean showdown!"
-          link="/projects/prawnbrawl"
+          title={projects[0].title}
+          image={projects[0].thumbnail}
+          desc={projects[0].desc}
+          link={projects[0].id}
         />
         <ProjectCard
-          title="Snail Space"
-          image={images.SnailThumb}
-          desc={
-            <>
-              Snails in space!
-              <br />
-              What else is there to say?
-            </>
-          }
-          link="/projects/snailspace"
+          title={projects[1].title}
+          image={projects[1].thumbnail}
+          desc={projects[1].desc}
+          link={projects[1].id}
         />
         <ProjectCard
-          title="Dice Diviners"
-          image={images.dicediviners}
-          desc="Fight waves of enemies using a dice that transforms into a random weapon"
-          link="/projects/dicediviners"
+          title={projects[2].title}
+          image={projects[2].thumbnail}
+          desc={projects[2].desc}
+          link={projects[2].id}
         />
       </div>
       <br />
