@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import CardDoorTop from "../assets/CardDoorTop.png";
 import CardDoorBottom from "../assets/CardDoorBottom.png";
