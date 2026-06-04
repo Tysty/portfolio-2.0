@@ -12,20 +12,18 @@ import Modeling from "./modeling";
 
 function App() {
   return (
-    <>
-      <HashRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/projects/3dmodeling" element={<Modeling />} />
-          <Route path="/projects/:id" element={<ProjectWindow />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-      </HashRouter>
-    </>
+    <HashRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/projects/3dmodeling" element={<Modeling />} />
+        <Route path="/projects/:id" element={<ProjectWindow />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
