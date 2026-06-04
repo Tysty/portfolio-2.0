@@ -46,7 +46,7 @@ function ProjectCard({ title, image, desc, link }: Props) {
         />
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">{desc}</p>
+          <p className="card-text truncate">{desc}</p>
           <a
             onClick={() => {
               navigate(link);

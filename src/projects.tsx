@@ -191,8 +191,8 @@ export const projects = [
   },
   {
     id: "teamsorter",
-    title: "AI Game Jam Team Sorter",
-    desc: "An intelligent agent that automatically creates balanced game jam teams using participant skills, roles, and preferences.",
+    title: "Game Jam Team Sorter",
+    desc: "A program that uses an AI agent to automatically create balanced game jam teams with parameters such as participant skills, roles, and preferences.",
     dev_time: "1 week",
     team_size: "Solo",
     tools: "Python, Pandas",

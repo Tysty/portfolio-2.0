@@ -12,7 +12,11 @@ function ProjectsPage() {
       {Array.from({ length: Math.ceil(projects.length / 3) }, (_, i) =>
         projects.slice(i * 3, i * 3 + 3),
       ).map((row, rowIndex) => (
-        <div key={rowIndex} className="center h-group">
+        <div
+          key={rowIndex}
+          className="center h-group"
+          style={{ marginRight: "45px" }}
+        >
           {row.map((project, index) => (
             <ProjectCard
               key={index}

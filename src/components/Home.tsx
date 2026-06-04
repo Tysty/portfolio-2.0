@@ -8,24 +8,24 @@ function Home() {
       <br></br>
       <h1 className="center home-title">Hi, I'm Tyler</h1>
       <h3 className="center home-text">I like making games</h3>
-      <div className="center h-group">
+      <div className="center h-group" style={{ marginRight: "45px" }}>
         <ProjectCard
           title={projects[0].title}
           image={projects[0].thumbnail}
           desc={projects[0].desc}
-          link={projects[0].id}
+          link={"projects/" + projects[0].id}
         />
         <ProjectCard
           title={projects[1].title}
           image={projects[1].thumbnail}
           desc={projects[1].desc}
-          link={projects[1].id}
+          link={"projects/" + projects[1].id}
         />
         <ProjectCard
           title={projects[2].title}
           image={projects[2].thumbnail}
           desc={projects[2].desc}
-          link={projects[2].id}
+          link={"projects/" + projects[2].id}
         />
       </div>
       <br />
