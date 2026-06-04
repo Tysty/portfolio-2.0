@@ -3,10 +3,12 @@ import { Routes, Route } from "react-router-dom";
 import "./styles/App.css";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Projects from "./projects";
-import About from "./About";
-import Resume from "./Resume";
+import ProjectsPage from "./projects_page";
+import About from "./about";
+import Resume from "./resume";
 import PageNotFound from "./components/PageNotFound";
+import ProjectWindow from "./components/ProjectWindow";
+import Modeling from "./modeling";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/projects/3dmodeling" element={<Modeling />} />
+        <Route path="/projects/:id" element={<ProjectWindow />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="*" element={<PageNotFound />} />

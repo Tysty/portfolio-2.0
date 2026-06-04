@@ -1,3 +1,5 @@
+import { Link, useNavigate } from "react-router-dom";
+
 import CardDoorTop from "../assets/CardDoorTop.png";
 import CardDoorBottom from "../assets/CardDoorBottom.png";
 
@@ -9,6 +11,7 @@ interface Props {
 }
 
 function ProjectCard({ title, image, desc, link }: Props) {
+  const navigate = useNavigate();
   return (
     <div style={{ position: "relative", width: "22rem", margin: "25px" }}>
       <img
@@ -44,7 +47,12 @@ function ProjectCard({ title, image, desc, link }: Props) {
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
           <p className="card-text">{desc}</p>
-          <a href={link} className="btn btn-primary">
+          <a
+            onClick={() => {
+              navigate(link);
+            }}
+            className="btn btn-primary"
+          >
             Go to Project
           </a>
         </div>

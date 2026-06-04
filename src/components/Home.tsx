@@ -1,8 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import CircleLink from "./CircleLink";
-import prawnbrawl from "../assets/PrawnBrawl.png";
-import snailspace from "../assets/snailspace.png";
-import dicediviners from "../assets/dicediviners.png";
+import * as images from "../assets";
 
 function Home() {
   return (
@@ -10,16 +8,16 @@ function Home() {
       <br></br>
       <h1 className="center home-title">Hi, I'm Tyler</h1>
       <h3 className="center home-text">I like making games</h3>
-      <div className="center project-group">
+      <div className="center h-group">
         <ProjectCard
           title="Prawn Brawl"
-          image={prawnbrawl}
+          image={images.PrawnThumb}
           desc="Battle your friends in this 2D local multiplayer crustacean showdown!"
-          link=""
+          link="/projects/prawnbrawl"
         />
         <ProjectCard
           title="Snail Space"
-          image={snailspace}
+          image={images.SnailThumb}
           desc={
             <>
               Snails in space!
@@ -27,13 +25,13 @@ function Home() {
               What else is there to say?
             </>
           }
-          link=""
+          link="/projects/snailspace"
         />
         <ProjectCard
           title="Dice Diviners"
-          image={dicediviners}
+          image={images.dicediviners}
           desc="Fight waves of enemies using a dice that transforms into a random weapon"
-          link=""
+          link="/projects/dicediviners"
         />
       </div>
       <br />

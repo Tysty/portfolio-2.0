@@ -68,12 +68,19 @@ nav{
     font-size: 30px;
 }
 
+.project-title{
+    font-size: 50px;
+}
+.project-p p{
+    font-size: 25px;
+}
+
 .project-card {
     display: inline-block;
     padding: 20px;
 }
 
-.project-group {
+.h-group {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
