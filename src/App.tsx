@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import "./styles/App.css";
 import Navbar from "./components/Navbar";
@@ -13,16 +13,18 @@ import Modeling from "./modeling";
 function App() {
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/projects/3dmodeling" element={<Modeling />} />
-        <Route path="/projects/:id" element={<ProjectWindow />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
+      <HashRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/3dmodeling" element={<Modeling />} />
+          <Route path="/projects/:id" element={<ProjectWindow />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </HashRouter>
     </>
   );
 }
