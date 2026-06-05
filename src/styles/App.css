@@ -22,7 +22,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
-nav div {
+nav .nav-div {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-top: 2px solid #9BE9FF;
@@ -34,7 +34,7 @@ nav div {
   box-shadow: 0px 0px 10px 3px #00B7FF;
   clip-path: inset(-20px -20px 0px -20px);
 }
-nav div .link {
+nav .nav-div .link {
   color: inherit;
   font-size: 2rem;
   text-decoration: none;
@@ -133,13 +133,22 @@ li {
   border: none;
 }
 .carousel-button img {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
 }
 
 .carousel-indicators {
+  position: sticky;
   background: none;
   border: none;
   font-size: 20px;
   top: 0;
+}
+
+.carousel.rounded-3 {
+  overflow: hidden;
+}
+
+.carousel-item img {
+  border-radius: 12px;
 }/*# sourceMappingURL=App.css.map */

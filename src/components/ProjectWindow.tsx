@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import PageNotFound from "../components/PageNotFound";
 import { projects } from "../projects";
 import { motion } from "motion/react";
@@ -13,7 +14,7 @@ const carouselStyle: React.CSSProperties = {
 
 const carouselImageStyle: React.CSSProperties = {
   width: "100%",
-  height: "100%",
+  height: "735px",
   objectFit: "cover",
 };
 
@@ -23,6 +24,7 @@ function ProjectWindow() {
 
   if (!project) return <PageNotFound />;
 
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <motion.div
       initial={{ opacity: 0, y: 25 }}
@@ -36,7 +38,7 @@ function ProjectWindow() {
         <div className="col-8">
           <div
             id="projectCarousel"
-            className="carousel slide"
+            className="carousel slide rounded-3"
             data-bs-interval="false"
             style={carouselStyle}
           >
@@ -68,24 +70,45 @@ function ProjectWindow() {
             </div>
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <button
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               type="button"
               data-bs-target="#projectCarousel"
               data-bs-slide="prev"
               className="carousel-button"
+              onClick={() =>
+                setActiveIndex(
+                  activeIndex <= 0
+                    ? project.images.length - 1
+                    : activeIndex - 1,
+                )
+              }
             >
               <img src={images.ArrowLeft} />
               <span className="visually-hidden">Previous</span>
-            </button>
-            <button
+            </motion.button>
+            <p className="center" style={{ fontSize: "30px" }}>
+              {activeIndex + 1}/{project.images.length}
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               type="button"
               data-bs-target="#projectCarousel"
               data-bs-slide="next"
               className="carousel-button"
+              onClick={() =>
+                setActiveIndex(
+                  activeIndex >= project.images.length - 1
+                    ? 0
+                    : activeIndex + 1,
+                )
+              }
             >
               <img src={images.ArrowRight} />
               <span className="visually-hidden">Next</span>
-            </button>
+            </motion.button>
           </div>
         </div>
         <div className="col-4">

@@ -39,7 +39,7 @@ nav {
     display: flex;        // add this
     justify-content: center;
     align-items: center;
-    div{
+    .nav-div{
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         border-top: 2px solid $primary-color;
@@ -147,16 +147,22 @@ li{
     background: none;
     border: none;
     img {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
     }
 }
 
 
 .carousel-indicators {
-    position: sticky
+    position: sticky;
     background: none;
     border: none;
     font-size: 20px;
     top: 0;
+}
+
+.carousel.rounded-3 { overflow: hidden; }
+
+.carousel-item img {
+  border-radius: 12px;
 }

@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 interface Props {
   url: string;
   icon: string;
@@ -5,14 +7,15 @@ interface Props {
 
 function CircleLink({ url, icon }: Props) {
   return (
-    <a
+    <motion.a
+      whileHover={{ scale: 1.2 }}
       href={url}
       target="_blank"
       rel="noopener noreferrer"
       className="button-link"
     >
       <i className={"fa-brands " + icon}></i>
-    </a>
+    </motion.a>
   );
 }
 export default CircleLink;

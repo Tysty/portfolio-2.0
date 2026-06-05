@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import resumePdf from "./assets/Resume.pdf";
 
 function resume() {
   return (
@@ -10,6 +11,19 @@ function resume() {
     >
       <h1 className="center home-title">Resume</h1>
       <br />
+      <embed
+        type="application/pdf"
+        style={{ display: "block", margin: "0 auto" }}
+        width="1000"
+        height="1150"
+        src={resumePdf}
+      />
+    </motion.div>
+  );
+}
+export default resume;
+
+/*
       <iframe
         src="https://rose-lauretta-19.tiiny.site"
         width="1000"
@@ -17,7 +31,4 @@ function resume() {
         allowFullScreen
         style={{ display: "block", margin: "0 auto" }}
       />
-    </motion.div>
-  );
-}
-export default resume;
+*/
