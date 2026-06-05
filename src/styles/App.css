@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
 .nav-separator {
   margin: 15px;
   border: none;
@@ -14,6 +18,7 @@
 
 nav {
   padding-top: 10px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -115,4 +120,10 @@ li {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+.resume-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=App.css.map */

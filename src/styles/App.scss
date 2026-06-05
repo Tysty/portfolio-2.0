@@ -21,6 +21,9 @@ $glow-color: #00B7FF;
     filter: blur(0.25px);
 }
 
+html{
+    scroll-behavior: smooth !important;
+}
 
 .nav-separator{
     @include separator(15px);
@@ -31,8 +34,9 @@ $glow-color: #00B7FF;
     font-family: 'Lexend Deca', sans-serif;
     color: white;
 }
-nav{
+nav {
     padding-top: 10px;
+    display: flex;        // add this
     justify-content: center;
     align-items: center;
     div{
@@ -131,4 +135,10 @@ li{
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+.resume-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
