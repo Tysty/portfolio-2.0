@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import PageNotFound from "../components/PageNotFound";
 import { projects } from "../projects";
+import { motion } from "motion/react";
 
 const carouselStyle: React.CSSProperties = {
   width: "100%",
@@ -22,7 +23,12 @@ function ProjectWindow() {
   if (!project) return <PageNotFound />;
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 25 }}
+      transition={{ duration: 0.2 }}
+    >
       <br />
       <div className="row g-0">
         <div className="col-8">
@@ -110,7 +116,7 @@ function ProjectWindow() {
       <br />
       <h1 className="project-title center">Retrospective</h1>
       <p>{project.retrospective}</p>
-    </>
+    </motion.div>
   );
 }
 

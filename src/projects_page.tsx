@@ -1,9 +1,15 @@
 import ProjectCard from "./components/ProjectCard";
 import { projects } from "./projects";
+import { motion } from "motion/react";
 
 function ProjectsPage() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 25 }}
+      transition={{ duration: 0.2 }}
+    >
       <br></br>
       <h1 className="center home-title">Projects</h1>
       <h3 className="center home-text">
@@ -28,7 +34,7 @@ function ProjectsPage() {
           ))}
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 export default ProjectsPage;

@@ -1,8 +1,9 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
-
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./styles/App.css";
+import { AnimatePresence } from "motion/react";
+
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
+import Home from "./Home";
 import ProjectsPage from "./projects_page";
 import About from "./about";
 import Resume from "./resume";
@@ -10,11 +11,12 @@ import PageNotFound from "./components/PageNotFound";
 import ProjectWindow from "./components/ProjectWindow";
 import Modeling from "./modeling";
 
-function App() {
+function AnimatedRoutes() {
+  const location = useLocation();
+
   return (
-    <HashRouter>
-      <Navbar />
-      <Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/projects/3dmodeling" element={<Modeling />} />
@@ -23,6 +25,15 @@ function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+    </AnimatePresence>
+  );
+}
+
+function App() {
+  return (
+    <HashRouter>
+      <Navbar />
+      <AnimatedRoutes />
     </HashRouter>
   );
 }

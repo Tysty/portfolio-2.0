@@ -1,10 +1,16 @@
-import ProjectCard from "./ProjectCard";
-import CircleLink from "./CircleLink";
-import { projects } from "../projects";
+import ProjectCard from "./components/ProjectCard";
+import CircleLink from "./components/CircleLink";
+import { projects } from "./projects";
+import { motion } from "motion/react";
 
 function Home() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 25 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 25 }}
+      transition={{ duration: 0.2 }}
+    >
       <br></br>
       <h1 className="center home-title">Hi, I'm Tyler</h1>
       <h3 className="center home-text">I like making games</h3>
@@ -45,7 +51,7 @@ function Home() {
         />
         <CircleLink url="https://github.com/Tysty" icon="fa-github" />
       </div>
-    </div>
+    </motion.div>
   );
 }
 export default Home;
