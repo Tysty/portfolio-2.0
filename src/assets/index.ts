@@ -5,6 +5,10 @@ export { default as CardBottom } from './CardDoorBottom.png';
 // Portrait
 export { default as portrait } from './portrait.jpg';
 
+// Arrows
+export { default as ArrowLeft } from './ArrowLeft.png';
+export { default as ArrowRight } from './ArrowRight.png';
+
 // Prawn Brawl
 export { default as PrawnThumb } from './PrawnBrawl.png';
 export { default as prawn1 } from './prawn1.png';

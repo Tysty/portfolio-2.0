@@ -2,10 +2,11 @@ import { useParams } from "react-router-dom";
 import PageNotFound from "../components/PageNotFound";
 import { projects } from "../projects";
 import { motion } from "motion/react";
+import * as images from "../assets";
 
 const carouselStyle: React.CSSProperties = {
   width: "100%",
-  height: "700px",
+  height: "750px",
   overflow: "hidden",
   paddingLeft: "30px",
 };
@@ -30,58 +31,59 @@ function ProjectWindow() {
       transition={{ duration: 0.2 }}
     >
       <br />
+      <br />
       <div className="row g-0">
         <div className="col-8">
           <div
-            id="myCarousel"
+            id="projectCarousel"
             className="carousel slide"
             data-bs-interval="false"
             style={carouselStyle}
           >
-            <div className="carousel-indicators">
-              {project.images.map((_, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  data-bs-target="#myCarousel"
-                  data-bs-slide-to={index}
-                  className={index === 0 ? "active" : ""}
-                />
-              ))}
-            </div>
-
             <div className="carousel-inner">
               {project.images.map((image, index) => (
                 <div
                   key={index}
                   className={`carousel-item ${index === 0 ? "active" : ""}`}
                 >
-                  <img
-                    src={image}
-                    className="d-block w-100"
-                    alt={`${project.title} screenshot ${index + 1}`}
-                    style={carouselImageStyle}
-                  />
+                  {image.endsWith(".mp4") ? (
+                    <video
+                      className="d-block w-100"
+                      controls
+                      style={{ objectFit: "contain" }}
+                    >
+                      <source src={image} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      src={image}
+                      className="d-block w-100"
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      style={carouselImageStyle}
+                    />
+                  )}
                 </div>
               ))}
             </div>
-
+          </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
             <button
-              className="carousel-control-prev"
               type="button"
-              data-bs-target="#myCarousel"
+              data-bs-target="#projectCarousel"
               data-bs-slide="prev"
+              className="carousel-button"
             >
-              <span className="carousel-control-prev-icon" />
+              <img src={images.ArrowLeft} />
               <span className="visually-hidden">Previous</span>
             </button>
             <button
-              className="carousel-control-next"
               type="button"
-              data-bs-target="#myCarousel"
+              data-bs-target="#projectCarousel"
               data-bs-slide="next"
+              className="carousel-button"
             >
-              <span className="carousel-control-next-icon" />
+              <img src={images.ArrowRight} />
               <span className="visually-hidden">Next</span>
             </button>
           </div>
@@ -116,6 +118,8 @@ function ProjectWindow() {
       <br />
       <h1 className="project-title center">Retrospective</h1>
       <p>{project.retrospective}</p>
+      <br />
+      <br />
     </motion.div>
   );
 }

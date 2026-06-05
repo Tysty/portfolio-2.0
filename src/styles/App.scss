@@ -142,3 +142,21 @@ li{
   display: flex;
   justify-content: center;
 }
+
+.carousel-button {
+    background: none;
+    border: none;
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+.carousel-indicators {
+    position: sticky
+    background: none;
+    border: none;
+    font-size: 20px;
+    top: 0;
+}
