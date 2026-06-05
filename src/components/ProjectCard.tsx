@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import CardDoorTop from "../assets/CardDoorTop.png";
 import CardDoorBottom from "../assets/CardDoorBottom.png";
+import { motion } from "motion/react";
 
 interface Props {
   title: string;
@@ -13,7 +14,10 @@ interface Props {
 function ProjectCard({ title, image, desc, link }: Props) {
   const navigate = useNavigate();
   return (
-    <div style={{ position: "relative", width: "22rem", margin: "25px" }}>
+    <motion.div
+      style={{ position: "relative", width: "22rem", margin: "50px" }}
+      whileHover={{ scale: 1.1 }}
+    >
       <img
         src={CardDoorTop}
         style={{
@@ -47,14 +51,15 @@ function ProjectCard({ title, image, desc, link }: Props) {
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
           <p className="card-text truncate">{desc}</p>
-          <a
+          <motion.a
+            whileHover={{ scale: 1.2 }}
             onClick={() => {
               navigate(link);
             }}
             className="btn btn-primary"
           >
             Go to Project
-          </a>
+          </motion.a>
         </div>
       </div>
       <img
@@ -68,7 +73,7 @@ function ProjectCard({ title, image, desc, link }: Props) {
           pointerEvents: "none",
         }}
       />
-    </div>
+    </motion.div>
   );
 }
 export default ProjectCard;

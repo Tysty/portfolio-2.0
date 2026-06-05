@@ -71,7 +71,7 @@ function ProjectWindow() {
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               type="button"
               data-bs-target="#projectCarousel"
@@ -92,7 +92,7 @@ function ProjectWindow() {
               {activeIndex + 1}/{project.images.length}
             </p>
             <motion.button
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
               type="button"
               data-bs-target="#projectCarousel"
