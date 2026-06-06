@@ -31,7 +31,7 @@ html{
 
 *{
     box-sizing: border-box;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: white;
 }
 nav {
@@ -67,7 +67,8 @@ nav {
 }
 
 .home-title {
-    font-size: 65px;
+    font-size: 100px;
+    margin-bottom: 0;
 }
 .home-text {
     font-size: 30px;
@@ -87,7 +88,6 @@ nav {
 
 .h-group {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -111,13 +111,13 @@ nav {
 
 .card-title {
     box-sizing: border-box;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: white;
 }
 
 .card-text {
     box-sizing: border-box;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: white;
 }
 

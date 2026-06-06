@@ -16,30 +16,25 @@ function about() {
           <br />
           <p style={{ textAlign: "left" }}>
             {" "}
-            Growing up in California, I developed an interest in technology at
-            an early age through video games. Like many kids, I enjoyed playing
-            games with friends, but I was also curious about how they were
-            built. I found myself wondering what was happening behind the scenes
-            and how developers created the worlds and experiences that players
-            enjoyed. That curiosity led me to teach myself game development
-            through online tutorials, personal projects, and a lot of
-            experimentation. Along the way, I learned Unity, Unreal Engine,
-            Godot, GameMaker, and Blender. Each project taught me something new
-            and helped me develop both my technical and creative skills.
+            I am a junior studying Software Development at the University of
+            Utah. I am interested in building software that creates interaction
+            and shared experiences between people.
             <br />
             <br />
-            When it came time to choose a college, I decided to leave California
-            and attend the University of Utah. I was drawn to its strong game
-            development program and the opportunity to learn alongside others
-            who shared similar interests. Since then, I have continued to grow
-            through coursework, game jams, personal projects, and leadership
-            roles within the game development community.
+            I enjoy working on applications that combine functionality with
+            interaction, collaboration, and competition. I enjoy building
+            efficient, well-optimized code that performs at a high level.
             <br />
             <br />
-            Today, I enjoy building games, exploring AI, and developing software
-            that solves real problems. What started as curiosity about how games
-            were made has grown into a passion for creating technology that
-            people can use, enjoy, and learn from.
+            My experiences with tools like Discord, VS Code, and Wii Sports have
+            shaped how I think about software development. They showed me how
+            different systems can support communication, productivity, and
+            interaction in different ways.
+            <br />
+            <br />
+            I’ve built projects using C#, C++, Python, Java, JavaScript, React,
+            and game engines like Unity, Unreal Engine, and Godot, and I hope to
+            build interactive software that creates shared experiences.
           </p>
         </div>
         <div className="col-4">

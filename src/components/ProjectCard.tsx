@@ -15,7 +15,7 @@ function ProjectCard({ title, image, desc, link }: Props) {
   const navigate = useNavigate();
   return (
     <motion.div
-      style={{ position: "relative", width: "22rem", margin: "50px" }}
+      style={{ position: "relative", width: "18rem", margin: "50px" }}
       whileHover={{ scale: 1.1 }}
     >
       <img
@@ -49,7 +49,9 @@ function ProjectCard({ title, image, desc, link }: Props) {
           }}
         />
         <div className="card-body">
-          <h5 className="card-title">{title}</h5>
+          <h5 className="card-title">
+            <strong>{title}</strong>
+          </h5>
           <p className="card-text truncate">{desc}</p>
           <motion.a
             whileHover={{ scale: 1.2 }}
@@ -57,6 +59,7 @@ function ProjectCard({ title, image, desc, link }: Props) {
               navigate(link);
             }}
             className="btn btn-primary"
+            style={{ borderRadius: "3px" }}
           >
             Go to Project
           </motion.a>
