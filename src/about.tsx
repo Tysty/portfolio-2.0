@@ -12,7 +12,12 @@ function about() {
     >
       <div className="row center">
         <div className="col-6">
-          <h1 className="home-title">About Me</h1>
+          <h1
+            className=" home-title"
+            style={{ textAlign: "left", marginLeft: 30 }}
+          >
+            <strong>About Me</strong>
+          </h1>
           <br />
           <p style={{ textAlign: "left" }}>
             {" "}
@@ -47,18 +52,25 @@ function about() {
           <br />
           <div className="center">
             <CircleLink
+              url="mailto:tylerstyle05@gmail.com"
+              icon="fa-solid fa-envelope"
+            />
+            <CircleLink
               url="https://www.youtube.com/@tylerstyle307"
-              icon="fa-youtube"
+              icon="fa-brands fa-youtube"
             />
             <CircleLink
               url="https://discordapp.com/users/517953398625140776"
-              icon="fa-discord"
+              icon="fa-brands fa-discord"
             />
             <CircleLink
               url="https://www.linkedin.com/in/tyler-chin-7a2829252/"
-              icon="fa-linkedin"
+              icon="fa-brands fa-linkedin"
             />
-            <CircleLink url="https://github.com/Tysty" icon="fa-github" />
+            <CircleLink
+              url="https://github.com/Tysty"
+              icon="fa-brands fa-github"
+            />
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ function CircleLink({ url, icon }: Props) {
       rel="noopener noreferrer"
       className="button-link"
     >
-      <i className={"fa-brands " + icon}></i>
+      <i className={icon}></i>
     </motion.a>
   );
 }

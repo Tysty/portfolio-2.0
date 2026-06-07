@@ -11,7 +11,9 @@ function ProjectsPage() {
       transition={{ duration: 0.2 }}
     >
       <br></br>
-      <h1 className="center home-title">Projects</h1>
+      <h1 className=" home-title center">
+        <strong>Projects</strong>
+      </h1>
       <h3 className="center home-text">
         Here are some of the projects I have worked on.
       </h3>

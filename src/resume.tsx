@@ -9,7 +9,9 @@ function resume() {
       exit={{ opacity: 0, y: 25 }}
       transition={{ duration: 0.2 }}
     >
-      <h1 className="center home-title">Resume</h1>
+      <h1 className=" home-title center">
+        <strong>Resume</strong>
+      </h1>
       <br />
       <embed
         type="application/pdf"
